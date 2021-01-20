@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Quiz App</title>
+    <style>
+      input {
+        margin: 0.5rem;
+      }
+
+      .container {
+        display: flex;
+        /* color: white; */
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      @media (max-width: 575px) {
+        .modal-content {
+          min-height: 109%;
+          max-width: 85%;
+          margin: 0 auto;
+        }
+      }
+
+      .modal-content {
+        min-height: 200px;
+        max-width: 600px;
+        border-radius: 10px;
+      }
+
+      .card {
+        margin: 150px auto;
+        width: 600px;
+        height: 350px;
+        border: #ff5722;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        border-radius: 10px;
+      }
+
+      .btn-my {
+        font-weight: 500;
+        background-color: #ff5722;
+        color: #eeeeee;
+        border-radius: 10px;
+      }
+      .card {
+        box-shadow: 5px 5px 10px #d1d4d5, -5px -5px 10px #ebeff1;
+      }
+      .btn-my:hover {
+        color: #eeeeee;
+      }
+
+      .card-body input:checked ~ {
+        background-color: #ff5722;
+        border-color: #ff5722;
+      }
+
+      .card-body input[type="radio"]:checked {
+        background-color: #ff5722;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card p-3 mb-5">
+        <div id="cardbody" class="card-body" style="padding: 3rem">
+          <h5 id="question" class="card-title">&nbsp;</h5>
+          <input type="radio" name="ans" id="a" value="a" />
+          <label id="label_a" for="a">answer 1</label><br />
+          <input type="radio" name="ans" id="b" value="b" />
+          <label id="label_b" for="b">answer 2</label><br />
+          <input type="radio" name="ans" id="c" value="c" />
+          <label id="label_c" for="c">answer 3</label><br />
+          <input type="radio" name="ans" id="d" value="d" />
+          <label id="label_d" for="d">answer 4</label>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="mymodal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header my-3" style="border: none"></div>
+              <div
+                class="modal-body"
+                style="margin: 0 auto; border: none; padding: 10px"
+              >
+                <h6>Select an option before Submitting answer</h6>
+              </div>
+              <div
+                class="modal-footer"
+                style="margin: 0 auto; border: none; padding: 10px"
+              >
+                <button type="button" class="btn btn-my" data-dismiss="modal">
+                  Ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          id="btnsubmit"
+          class="btn btn-block btn-my"
+          style="height: 50px"
+        >
+          Submit
+        </button>
+        <button id="loadbtn" class="btn btn-block btn-my" style="height: 50px">
+          Reload
+        </button>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
